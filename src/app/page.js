@@ -21,16 +21,16 @@ export default function Home() {
               Abdul Mahmoud
             </h2>
             <div className="relative mx-auto my-10 bg-gradient-to-b from-blue-600 rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden">
-            <Image src={gradpic} />
+            <Image alt="Abdul-Avatar" src={gradpic} />
           </div>
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl py-2">
               Full Stack Developer
             </h3>
             <p className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl py-5 leading-9 text-gray-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
-              Hey there, I'm Abdul, a Software Engineer still early in my tech journey. My passion lies
+              {`Hey there, I'm Abdul, a Software Engineer still early in my tech journey. My passion lies
               in web and cloud technologies, and you'll usually find me diving into new things, learning,
               and constantly honing my skills. Outside the tech world, I enjoy lifting weights, playing
-              soccer, and winding down with a nice cup of tea.
+              soccer, and winding down with a nice cup of tea.`}
             </p>
           </div>
 
@@ -48,12 +48,9 @@ export default function Home() {
 
         </section>
 
-        <section>
-          <div></div>
-        </section>
       </main>
 
-      <footer className="bg-orange-50 h-20">
+      <footer className="bg-slate-100 h-20">
 
 
       </footer>
