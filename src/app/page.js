@@ -9,17 +9,20 @@ export default function Home() {
 
 
   return (
-    <div className="bg-orange-50">
+    <div className="bg-slate-100">
 
       <ResponsiveNavbar/>
-      <main className="bg-orange-50 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14">
+      <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14">
         
         <section className="min-h-screen">
 
           <div className="text-center p-4 sm:p-8 pd:p-10 lg:p-12 xl:p-16 max-w-screen-md mx-auto">
-            <h2 className="text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-red-900 font-medium">
+            <h2 className="text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium">
               Abdul Mahmoud
             </h2>
+            <div className="relative mx-auto my-10 bg-gradient-to-b from-blue-600 rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden">
+            <Image src={gradpic} />
+          </div>
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl py-2">
               Full Stack Developer
             </h3>
@@ -43,9 +46,6 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="relative mx-auto my-10 bg-gradient-to-b from-red-900 rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden">
-            <Image src={gradpic} />
-          </div>
         </section>
 
         <section>
