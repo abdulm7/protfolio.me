@@ -22,7 +22,7 @@ export default function Home() {
       <ResponsiveNavbar />
       <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14">
 
-        <section className="">
+        <section className="min-w-screen min-h-screen">
 
           <div className="text-center p-4 sm:p-8 pd:p-10 lg:p-12 xl:p-16 max-w-screen-md mx-auto">
             <h2 className="text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium">
@@ -58,7 +58,7 @@ export default function Home() {
 
       </main>
 
-      <section className='flex justify-center'>
+      {/* <section className='flex justify-center'>
         <div className="sm:flex lg:flex justify-center items-center max-w-screen-2xl">
           <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 mx-2 max-w-lg items-center transform transition-transform hover:scale-105">
             <div className='flex justify-center'><Image className="" src={gradpic} width={100} height={100} /> </div>
@@ -108,7 +108,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="bg-slate-100 h-20">
 

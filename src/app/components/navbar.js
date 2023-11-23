@@ -42,7 +42,7 @@ export default function ResponsiveNavbar() {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4">
+        <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4" >
           <ul className="flex flex-col gap-10 items-center">
             <li>Skills</li>
             <li>Projects</li>
