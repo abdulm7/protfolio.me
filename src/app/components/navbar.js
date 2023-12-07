@@ -32,7 +32,7 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
           <li>
             <a
               className="bg-gradient-to-r from-slate-500 to-slate-900 text-white p-2 rounded-lg dark:from-slate-400 dark:to-white dark:text-black"
-              href="#"
+              href="Abdul_Resume.pdf" target='_blank'
             >
               Resume
             </a>
@@ -61,7 +61,7 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
           <li>
             <a
               className="bg-gradient-to-r from-slate-500 to-slate-900 text-white p-2 rounded-lg dark:from-slate-400 dark:to-white dark:text-black"
-              href="#"
+              href="Abdul_Resume.pdf" target='_blank'
             >
               Resume
             </a>
