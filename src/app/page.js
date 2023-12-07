@@ -46,13 +46,13 @@ export default function Home() {
           </div>
 
           <div className="flex text-3xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl justify-center gap-6 text-gray-800 dark:text-white">
-            <a href="https://github.com/abdulm7">
+            <a href="https://github.com/abdulm7" target='_blank'>
               <AiFillGithub />
             </a>
-            <a href="https://www.linkedin.com/in/abdulm7/">
+            <a href="https://www.linkedin.com/in/abdulm7/" target='_blank'>
               <AiFillLinkedin />
             </a>
-            <a href="mailto:abdul.m0701@gmail.com">
+            <a href="mailto:abdul.m0701@gmail.com" target='_blank'>
               <AiOutlineMail />
             </a>
           </div>
