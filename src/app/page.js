@@ -12,29 +12,32 @@ export default function Home() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const [darkMode, setDarkMode] = useState(false);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <div className="bg-slate-100">
+    <div className={darkMode ? 'dark' : ""}>
+      
 
-      <ResponsiveNavbar />
-      <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14">
-
+      <ResponsiveNavbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14 dark:bg-slate-900">
+      
         <section className="min-w-screen min-h-screen">
 
           <div className="text-center p-4 sm:p-8 pd:p-10 lg:p-12 xl:p-16 max-w-screen-md mx-auto">
-            <h2 className="text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium">
+            <h2 className="text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
               Abdul Mahmoud
             </h2>
-            <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl py-2">
+            <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl py-2 dark:text-sky-50">
               Guelph, Ontario <div className='w-2'> </div><IoLocationSharp/>
             </h3>
-            <div className="relative mx-auto my-10 bg-gradient-to-b from-blue-600 rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden">
+            <div className="relative mx-auto my-10 bg-gradient-to-b rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden dark:bg-gradient-to-b from-slate-500">
               <Image alt="Abdul-Avatar" src={gradpic} />
             </div>
-            <p className="text-md sm:text-md md:text-lg lg:text-lg xl:text-xl leading-9 text-gray-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
+            <p className="text-md sm:text-md md:text-lg lg:text-lg xl:text-xl leading-9 text-gray-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 dark:text-white">
               {`Hey there, I'm Abdul, a Software Engineer still early in my tech journey. My passion lies
               in web and cloud technologies, and you'll usually find me diving into new things, learning,
               and constantly honing my skills. Outside the tech world, I enjoy lifting weights, playing
@@ -42,7 +45,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex text-3xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl justify-center gap-6 text-gray-800">
+          <div className="flex text-3xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl justify-center gap-6 text-gray-800 dark:text-white">
             <a href="https://github.com/abdulm7">
               <AiFillGithub />
             </a>
@@ -110,7 +113,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <footer className="bg-slate-100 h-20">
+      <footer className="bg-slate-100 h-20 dark:bg-slate-900">
 
 
       </footer>
