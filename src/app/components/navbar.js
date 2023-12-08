@@ -26,7 +26,7 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
           <li>Contact</li> */}
           <li>
             {darkMode ? <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" /> : 
-              <BsFillMoonStarsFill onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl" /> }
+              <BsFillMoonStarsFill onClick={toggleDarkMode} className="text-gray-800 cursor-pointer text-xl lg:text-3xl" /> }
             
           </li>
           <li>
@@ -48,14 +48,14 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4 dark:bg-slate-900" >
+        <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4 dark:bg-slate-800" >
           <ul className="flex flex-col gap-10 items-center">
             {/* <li>Skills</li>
             <li>Projects</li>
             <li>Contact</li> */}
           <li>
-            {darkMode ? <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" /> : 
-              <BsFillMoonStarsFill onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl" /> }
+            {!darkMode ?  <BsFillMoonStarsFill onClick={toggleDarkMode} className="text-gray-800 cursor-pointer text-xl lg:text-3xl" />  : <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" />  
+              }
             
           </li>
           <li>
