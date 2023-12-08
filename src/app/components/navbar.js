@@ -26,7 +26,7 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
           <li>Contact</li> */}
           <li>
             {darkMode ? <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" /> : 
-              <BsFillMoonStarsFill onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl" /> }
+              <BsFillMoonStarsFill onClick={toggleDarkMode} className="text-gray-800 cursor-pointer text-xl lg:text-3xl" /> }
             
           </li>
           <li>
@@ -54,8 +54,8 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
             <li>Projects</li>
             <li>Contact</li> */}
           <li>
-            {darkMode ? <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" /> : 
-              <BsFillMoonStarsFill onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl" /> }
+            {!darkMode ?  <BsFillMoonStarsFill onClick={toggleDarkMode} className="text-gray-800 cursor-pointer text-xl lg:text-3xl" />  : <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" />  
+              }
             
           </li>
           <li>

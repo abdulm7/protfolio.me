@@ -32,7 +32,7 @@ export default function Home() {
               Abdul Mahmoud
             </h2>
             <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl py-2 dark:text-sky-50">
-              Guelph, Ontario <div className='w-2'> </div><IoLocationSharp/>
+              Guelph, Ontario <div className='w-2'> </div><IoLocationSharp className='text-gray-800 dark:text-white'/>
             </h3>
             <div className="relative mx-auto my-10 bg-gradient-to-b rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden dark:bg-gradient-to-b from-slate-500">
               <Image alt="Abdul-Avatar" src={gradpic} />
@@ -47,13 +47,13 @@ export default function Home() {
 
           <div className="flex text-3xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl justify-center gap-6 text-gray-800 dark:text-white">
             <a href="https://github.com/abdulm7" target='_blank'>
-              <AiFillGithub />
+              <AiFillGithub className='text-gray-800 dark:text-white'/>
             </a>
             <a href="https://www.linkedin.com/in/abdulm7/" target='_blank'>
-              <AiFillLinkedin />
+              <AiFillLinkedin className='text-gray-800 dark:text-white'/>
             </a>
             <a href="mailto:abdul.m0701@gmail.com" target='_blank'>
-              <AiOutlineMail />
+              <AiOutlineMail className='text-gray-800 dark:text-white'/>
             </a>
           </div>
 
