@@ -48,7 +48,7 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4 dark:bg-slate-900" >
+        <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4 dark:bg-slate-800" >
           <ul className="flex flex-col gap-10 items-center">
             {/* <li>Skills</li>
             <li>Projects</li>
