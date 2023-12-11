@@ -6,6 +6,7 @@ import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { IoLocationSharp } from "react-icons/io5";
 import gradpic from 'public/images/me.png';
 import ResponsiveNavbar from 'src/app/components/navbar.js';
+import ContactForm from 'src/app/components/contact.js';
 
 
 export default function Home() {
@@ -25,11 +26,11 @@ export default function Home() {
       <ResponsiveNavbar darkMode={darkMode} setDarkMode={setDarkMode}/>
       <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14 dark:bg-slate-900">
       
-        <section className="min-w-screen min-h-screen">
+        <section className="min-h-scree">
 
           <div className="text-center p-4 sm:p-8 pd:p-10 lg:p-12 xl:p-16 max-w-screen-md mx-auto">
-            <h2 className="text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
-              Abdul Mahmoud
+            <h2 className="text-2xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
+              Abdul Rahman Mahmoud
             </h2>
             <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl py-2 dark:text-sky-50">
               Guelph, Ontario <div className='w-2'> </div><IoLocationSharp className='text-gray-800 dark:text-white'/>
@@ -60,6 +61,13 @@ export default function Home() {
         </section>
 
       </main>
+
+      <section className='bg-slate-100 dark:bg-slate-900 pt-10'>
+        <h2 className="text-center text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
+              Get in Touch!
+            </h2>
+        <ContactForm darkMode={darkMode} setDarkMode={setDarkMode}/>
+      </section>
 
       {/* <section className='flex justify-center'>
         <div className="sm:flex lg:flex justify-center items-center max-w-screen-2xl">
