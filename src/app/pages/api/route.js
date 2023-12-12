@@ -35,7 +35,7 @@ export async function POST(req, res) {
             <p><strong>Message:</strong> ${message}</p>`,
         });
 
-        return NextResponse.json('Success')
+        return NextResponse.json(`${JSON.stringify(process.env.NEXT_RECEIVER)}`)
     } catch (error) {
         console.error('Error sending email:', error);
         return NextResponse.json('Failed', error)
