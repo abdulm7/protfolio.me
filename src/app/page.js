@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <div className={darkMode ? 'dark' : ""}>
+    <div className={darkMode ? 'dark' : ""} style={{scrollBehavior:'smooth'}}>
       
 
       <ResponsiveNavbar darkMode={darkMode} setDarkMode={setDarkMode}/>
@@ -62,7 +62,7 @@ export default function Home() {
 
       </main>
 
-      <section className='bg-slate-100 dark:bg-slate-900 pt-10'>
+      <section id="contact" className='bg-slate-100 dark:bg-slate-900 pt-10'>
         <h2 className="text-center text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
               Get in Touch!
             </h2>
@@ -127,4 +127,5 @@ export default function Home() {
       </footer>
     </div>
   );
+  
 }
