@@ -48,7 +48,7 @@ export default function ContactForm({ darkMode, setDarkMode }) {
     return (
         <form className="max-w-3xl w-5/6 mx-auto p-6 bg-slate-100 dark:bg-slate-900 rounded-md" onSubmit={handleSubmit}>
             <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-600 text-sm dark:text-slate-100 dark:bg-slate-900 font-semibold mb-2">
+                <label htmlFor="name" className="block text-gray-600 text-sm dark:text-slate-100 font-semibold mb-2">
                     Name
                 </label>
                 <input

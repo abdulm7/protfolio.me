@@ -24,7 +24,7 @@ export async function POST(req, res) {
 
     try {
         // Send email
-        const info = transporter.sendMail({
+        const info = await transporter.sendMail({
             from: `abdulm.me Contact Form Submission <${process.env.NEXT_EMAIL}>`,
             to: process.env.NEXT_RECEIVER,
             replyTo: email,
@@ -35,7 +35,7 @@ export async function POST(req, res) {
             <p><strong>Message:</strong> ${message}</p>`,
         });
 
-        return NextResponse.json('Success')
+        return NextResponse.json(`${JSON.stringify(info)}`)
     } catch (error) {
         console.error('Error sending email:', error);
         return NextResponse.json('Failed', error)
