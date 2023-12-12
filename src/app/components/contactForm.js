@@ -1,12 +1,11 @@
 "use client";
 import { useState } from 'react';
 
-export default function ContactForm({darkMode, setDarkMode}) {
+export default function ContactForm({ darkMode, setDarkMode }) {
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        tel: '',
         message: '',
     });
 
@@ -18,15 +17,38 @@ export default function ContactForm({darkMode, setDarkMode}) {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', formData);
+
+        try {
+            const response = await fetch('pages/api/', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await response.json();
+
+            // if (response.ok) {
+            //     console.log('Email sent successfully:');
+            //     // Optionally, reset the form after successful submission
+            //     // setFormData({ name: '', email: '', message: '' });
+            // } else {
+            //     console.error('Error sending email:', data.error);
+            // }
+
+            console.log(data)
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
     };
+
     return (
         <form className="max-w-3xl w-5/6 mx-auto p-6 bg-slate-100 dark:bg-slate-900 rounded-md" onSubmit={handleSubmit}>
             <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-600 text-sm dark:text-slate-100 font-semibold mb-2">
+                <label htmlFor="name" className="block text-gray-600 text-sm dark:text-slate-100 dark:bg-slate-900 font-semibold mb-2">
                     Name
                 </label>
                 <input
@@ -35,12 +57,12 @@ export default function ContactForm({darkMode, setDarkMode}) {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border-b-2 bg-slate-100 dark:bg-slate-900 border-gray-300 dark:text-white focus:outline-none focus:border-slate-500 transition duration-300"
+                    className="w-full px-4 py-2 border-b-2 bg-slate-100 dark:bg-slate-900 border-gray-300 dark:text-white focus:outline-none focus:border-slate-500 focus:dark:bg-slate-900 transition duration-300"
                     required
                 />
             </div>
             <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-600 text-sm font-semibold mb-2 dark:text-slate-100">
+                <label htmlFor="email" className="block text-gray-600 bg-slate-100 dark:bg-slate-900 text-sm font-semibold mb-2 dark:text-slate-100">
                     Email
                 </label>
                 <input

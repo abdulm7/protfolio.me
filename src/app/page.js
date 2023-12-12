@@ -6,7 +6,7 @@ import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { IoLocationSharp } from "react-icons/io5";
 import gradpic from 'public/images/me.png';
 import ResponsiveNavbar from 'src/app/components/navbar.js';
-import ContactForm from 'src/app/components/contact.js';
+import ContactForm from 'src/app/components/contactForm.js';
 
 
 export default function Home() {
