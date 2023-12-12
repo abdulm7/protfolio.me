@@ -22,3 +22,36 @@ body {
 body * {
   @apply transition-colors duration-300;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add this to your stylesheet or use a CSS-in-JS solution */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Adjust the z-index to ensure it's above the form */
+}
+
+.loader-container {
+  position: relative;
+  z-index: 1001; /* Ensure the loader is on top of the overlay */
+}
+
+.form-content {
+  transition: filter 0.3s ease-in-out;
+}
+
+.form-content.disabled {
+  filter: grayscale(100%);
+  pointer-events: none; /* Disable form interaction */
+}
