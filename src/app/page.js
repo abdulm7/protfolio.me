@@ -26,7 +26,7 @@ export default function Home() {
       <ResponsiveNavbar darkMode={darkMode} setDarkMode={setDarkMode}/>
       <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14 dark:bg-slate-900">
       
-        <section className="min-h-scree">
+        <section className="min-h-screen">
 
           <div className="text-center p-4 sm:p-8 pd:p-10 lg:p-12 xl:p-16 max-w-screen-md mx-auto">
             <h2 className="text-2xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">

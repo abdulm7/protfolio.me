@@ -18,13 +18,13 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
   return (
     <nav className="py-4 flex justify-between fixed top-0 w-full bg-white shadow-lg z-10 pr-10 dark:bg-slate-800  dark:text-white">
       <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 ">
-        <a href="#" className='text-slate-900 dark:text-white'>abdulm.me</a>
+        <a href="/#" className='text-slate-900 dark:text-white'>abdulm.me</a>
       </h1>
       <div className="hidden sm:flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 ml-4 sm:ml-6 md:ml-8 lg:ml-10 dark:text-white">
         <ul className="flex gap-10">
           {/* <li>Skills</li>
           <li>Projects</li>*/}
-          <a href="#contact"> <li className='text-slate-900 dark:text-white'>Contact</li> </a>
+          <a href="/#contact"> <li className='text-slate-900 dark:text-white'>Contact</li> </a>
           <li>
             {darkMode ? <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" /> : 
               <BsFillMoonStarsFill onClick={toggleDarkMode} className="text-gray-800 cursor-pointer text-xl lg:text-3xl" /> }
@@ -53,7 +53,7 @@ export default function ResponsiveNavbar({darkMode, setDarkMode}) {
           <ul className="flex flex-col gap-10 items-center">
             {/* <li>Skills</li>
             <li>Projects</li>*/}
-            <a href='#contact'><li className='text-slate-900 dark:text-white'>Contact</li></a>
+            <a href='/#contact'><li className='text-slate-900 dark:text-white'>Contact</li></a>
           <li>
             {!darkMode ?  <BsFillMoonStarsFill onClick={toggleDarkMode} className="text-gray-800 cursor-pointer text-xl lg:text-3xl" />  : <BsSun onClick={toggleDarkMode} className="cursor-pointer text-xl lg:text-3xl text-white" />  
               }
