@@ -7,6 +7,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import gradpic from 'public/images/me.png';
 import ResponsiveNavbar from 'src/app/components/navbar.js';
 import ContactForm from 'src/app/components/contactForm.js';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -20,12 +21,12 @@ export default function Home() {
   };
 
   return (
-    <div className={darkMode ? 'dark' : ""} style={{scrollBehavior:'smooth'}}>
-      
+    <div className={darkMode ? 'dark' : ""} style={{ scrollBehavior: 'smooth' }}>
 
-      <ResponsiveNavbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+
+      <ResponsiveNavbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="bg-slate-100 px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20 mt-14 dark:bg-slate-900">
-      
+
         <section className="min-h-screen">
 
           <div className="text-center p-4 sm:p-8 pd:p-10 lg:p-12 xl:p-16 max-w-screen-md mx-auto">
@@ -33,7 +34,11 @@ export default function Home() {
               Abdul Rahman Mahmoud
             </h2>
             <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl py-2 dark:text-sky-50">
-              Guelph, Ontario <div className='w-2'> </div><IoLocationSharp className='text-gray-800 dark:text-white'/>
+              <Link href="https://maps.app.goo.gl/gJro1fhwLhWCLJ4d9" target='_blank' className="tran flex animated-link">
+                Guelph, Ontario
+                <div className='w-2'> </div>
+                <IoLocationSharp className='text-gray-800 dark:text-white ' />
+              </Link>
             </h3>
             <div className="relative mx-auto my-10 bg-gradient-to-b rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden dark:bg-gradient-to-b from-slate-500">
               <Image alt="Abdul-Avatar" src={gradpic} />
@@ -46,15 +51,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex text-3xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl justify-center gap-6 text-gray-800 dark:text-white">
-            <a href="https://github.com/abdulm7" target='_blank'>
-              <AiFillGithub className='text-gray-800 dark:text-white'/>
+          <div className="flex text-3xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl justify-center gap-12 text-gray-800 dark:text-white p-3">
+            <a href="https://github.com/abdulm7" target='_blank' className="logo-container">
+              <AiFillGithub className='logo text-gray-800 dark:text-white' />
+              <span className="logo-text sm:text-md md:text-lg lg:text-xl xl:text-xl text-gray-800 dark:text-white">GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/abdulm7/" target='_blank'>
-              <AiFillLinkedin className='text-gray-800 dark:text-white'/>
+            <a href="https://www.linkedin.com/in/abdulm7/" target='_blank' className="logo-container">
+              <AiFillLinkedin className='logo text-gray-800 dark:text-white' />
+              <span className="logo-text sm:text-md md:text-lg lg:text-xl xl:text-xl text-gray-800 dark:text-white">LinkedIn</span>
             </a>
-            <a href="mailto:abdul.m0701@gmail.com" target='_blank'>
-              <AiOutlineMail className='text-gray-800 dark:text-white'/>
+            <a href="mailto:abdul.m0701@gmail.com" target='_blank' className="logo-container">
+              <AiOutlineMail className='logo text-gray-800 dark:text-white' />
+              <span className="logo-text text-gray-800 dark:text-white sm:text-md md:text-lg lg:text-xl xl:text-xl transition-opacity duration-1000">Email</span>
             </a>
           </div>
 
@@ -64,9 +72,9 @@ export default function Home() {
 
       <section id="contact" className='bg-slate-100 dark:bg-slate-900 pt-10'>
         <h2 className="text-center text-3xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
-              Get in Touch!
-            </h2>
-        <ContactForm darkMode={darkMode} setDarkMode={setDarkMode}/>
+          Get in Touch!
+        </h2>
+        <ContactForm darkMode={darkMode} setDarkMode={setDarkMode} />
       </section>
 
       {/* <section className='flex justify-center'>
@@ -127,5 +135,5 @@ export default function Home() {
       </footer>
     </div>
   );
-  
+
 }
