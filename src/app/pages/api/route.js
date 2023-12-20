@@ -25,10 +25,10 @@ export async function POST(req, res) {
     try {
         // Send email
         const info = await transporter.sendMail({
-            from: `abdulm.me Contact Form Submission <${process.env.NEXT_EMAIL}>`,
+            from: `Message from ${name} <${process.env.NEXT_EMAIL}>`,
             to: process.env.NEXT_RECEIVER,
             replyTo: email,
-            subject: `Message from ${name}`,
+            subject: `abdulm.me: Contact Form Submission`,
             html: `
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>

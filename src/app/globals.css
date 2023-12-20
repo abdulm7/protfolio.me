@@ -55,3 +55,42 @@ html {
   filter: grayscale(100%);
   pointer-events: none; /* Disable form interaction */
 }
+
+.logo-container {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+.logo {
+  font-size: 1.75em; /* Initial size of the logo */
+}
+
+.logo-text {
+  display: none;
+  position: absolute;
+  bottom: -1.5em; /* Adjust the distance of text from the logo */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0; /* Initial opacity set to 0 */
+  transition: opacity 0.3s ease-in-out; /* Add transition for opacity */
+}
+
+.logo-container:hover {
+  transform: scale(1.2); /* Enlarge the logo on hover */
+}
+
+.logo-container:hover .logo-text {
+  display: block; /* Show the text on hover */
+  opacity: 1; /* Fade in the text on hover */
+}
+
+.animated-link {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-link:hover {
+  transform: scale(1.25); /* Scale up on hover */
+}
