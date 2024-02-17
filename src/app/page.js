@@ -5,9 +5,11 @@ import { useState } from 'react';
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { IoLocationSharp } from "react-icons/io5";
 import gradpic from 'public/images/me.png';
+import kennaLogo from 'public/images/Kenna.png'
 import ResponsiveNavbar from 'src/app/components/navbar.js';
 import ContactForm from 'src/app/components/contactForm.js';
 import Link from 'next/link';
+import { BsTranslate } from 'react-icons/bs';
 
 
 export default function Home() {
@@ -33,11 +35,11 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
               Abdul Rahman Mahmoud
             </h2>
-            <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl py-2 dark:text-sky-50">
-              <Link href="https://maps.app.goo.gl/gJro1fhwLhWCLJ4d9" target='_blank' className="tran flex animated-link">
-                Guelph, Ontario
+            <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl pt-5 dark:text-sky-50">
+              <Link href="https://www.kenna.ca/" target='_blank' className="tran flex animated-link">
+                Application Developer @ Kenna
                 <div className='w-2'> </div>
-                <IoLocationSharp className='text-gray-800 dark:text-white ' />
+                <Image alt="Kenna-Logo" height="50" className='-translate-y-2 mx-2' src={kennaLogo} />
               </Link>
             </h3>
             <div className="relative mx-auto my-10 bg-gradient-to-b rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden dark:bg-gradient-to-b from-slate-500">
