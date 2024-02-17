@@ -5,7 +5,8 @@ import { useState } from 'react';
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { IoLocationSharp } from "react-icons/io5";
 import gradpic from 'public/images/me.png';
-import kennaLogo from 'public/images/Kenna.png'
+import kennaLogo from 'public/images/Kenna-Banner.png'
+import kennaLogoDark from 'public/images/Kenna-Banner-Dark.png'
 import ResponsiveNavbar from 'src/app/components/navbar.js';
 import ContactForm from 'src/app/components/contactForm.js';
 import Link from 'next/link';
@@ -35,11 +36,11 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl pd:text-4xl lg:text-5xl xl:text-5xl py-2 text-blue-900 font-medium dark:text-slate-100">
               Abdul Rahman Mahmoud
             </h2>
-            <h3 className="text-lg flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl pt-5 dark:text-sky-50">
+            <h3 className="text-sm flex justify-center sm:text-xl md:text-xl lg:text-1xl xl:text-2xl pt-5 dark:text-sky-50">
               <Link href="https://www.kenna.ca/" target='_blank' className="tran flex animated-link">
-                Application Developer @ Kenna
+                Application Developer -
                 <div className='w-2'> </div>
-                <Image alt="Kenna-Logo" height="50" className='-translate-y-2 mx-2' src={kennaLogo} />
+                <Image alt="Kenna-Logo" height="50" className={`h-8 sm:h-8 md:h-10 lg:h-12 w-auto -translate-y-1 md:-translate-y-1 sm:-translate-y-0 lg:-translate-y-2 md:mx-2`}  src={darkMode ? kennaLogoDark: kennaLogo} />
               </Link>
             </h3>
             <div className="relative mx-auto my-10 bg-gradient-to-b rounded-full w-40 sm:w-60 md:w-80 lg:w-96 xl:w-80 h-40 sm:h-60 md:h-80 lg:h-96 xl:h-80 overflow-hidden dark:bg-gradient-to-b from-slate-500">
